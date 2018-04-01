@@ -1,13 +1,13 @@
-<?php
+0<?php
 
 // Get the Values from the Contact form
 $EmailFrom = "Website Contact Form";
-$EmailTo = "info@lpsit.in";    // insert your email address here
+$EmailTo = "kiranbalasingh@hotmail.com";    // insert your email address here
 $Subject = "Queries"; // insert your Subject here
-$name = Trim(stripslashes($_POST['name'])); 
-$email = Trim(stripslashes($_POST['email'])); 
+$name = Trim(stripslashes($_POST['name']));
+$email = Trim(stripslashes($_POST['email']));
 $phone = Trim(stripslashes($_POST['phone']));
-$message = Trim(stripslashes($_POST['message'])); 
+$message = Trim(stripslashes($_POST['message']));
 
 
 // Assign the values to the variables for the email
@@ -33,7 +33,7 @@ $Body .= "message: ";
 
 $Body .= "\n";
 
-// Send mail 
+// Send mail
 $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // If success , redirect to index.html
